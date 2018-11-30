@@ -77,7 +77,7 @@ state = SiamRPN_track(state, im)  # track
 res = cxy_wh_2_rect(state['target_pos'], state['target_sz'])
 
 for ii in range(1,len(img_name)):
-    cx = int(res[0]-res[2]/2)
+    cx = int(res[0]+res[2]/2)
     cy = int(res[1]+res[3]/2)
     w = int(res[2])
     h = int(res[3])
